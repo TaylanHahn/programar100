@@ -1,0 +1,843 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: keepcalm;
+    src: url(font/keepcalm.ttf);
+}
+
+@font-face {
+    font-family: fonte-t;
+    src: url(font/Poppins-Regular.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4DFF53;
+    border-radius: 2em;
+}
+
+.darkmode::-webkit-scrollbar {
+    background-color: black;
+}
+
+
+/* --------FINAL BOTÃO NAVBAR */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FEFEFE;
+    box-shadow: 0 0 20PX black;
+}
+
+.navbar a {
+    margin-left: 2em;
+    color: #8c00ff;
+    font-size: 1.3em;
+    text-decoration: none;
+    transition: 1s;
+    font-family: fonte-t;
+    transition: all .3s ease-in-out;
+
+}
+
+.navbar a:hover {
+    color: #4DFF53;
+    border-radius: 1.5em .5em;
+}
+
+/*---------LOGO NAVBAR ----------  */
+
+.logo {
+    width: 13%;
+    margin-left: 3%;
+}
+
+/* MENU MOBILE */
+
+.menu-mobile {
+    text-align: center;
+    background-color: #b760ffbe;
+    position: absolute;
+    top: 7.2em;
+    left: 0;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.menu-mobile nav a {
+    backdrop-filter: blur(5px);
+    margin-right: 2em;
+    color: #FEFEFE;
+    text-shadow: 0 0 10px black;
+    font-size: 2.4em;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: 1s;
+    margin-top: 1em;
+    font-family: fonte-t;
+    transition: all .5s ease-in-out;
+    display: block;
+    padding: 20px 30px;
+}
+
+.menu-mobile nav a:hover {
+    box-shadow: 1px 1px 10px #FEFEFE;
+    padding: 20px 25px;
+    border-radius: 50px;
+}
+
+/* BOTAO ICONE */
+
+button {
+    margin-right: 3em;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #4DFF53;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    width: 15%;
+}
+
+.linha {
+    width: 30px;
+    height: 4px;
+    background-color: #4DFF53;
+    box-shadow: 0 0 10px #4DFF53;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    position: relative;
+    transform-origin: center;
+    transition: .3s;
+}
+
+button.ativar {
+    /* border: 4px solid red; */
+    box-shadow: 0 0 5px #b760ff93;
+
+}
+
+button.ativar .linha:nth-child(1) {
+    transform: translateY(10px) rotate(-40deg);
+    background-color: #b760ff;
+    box-shadow: 0 0 10px #b760ff;
+}
+
+button.ativar .linha:nth-child(3) {
+    transform: translateY(-18px) rotate(40deg);
+    background-color: #b760ff;
+    box-shadow: 0 0 10px #b760ff93;
+}
+
+button.ativar .linha:nth-child(2) {
+    opacity: 0;
+}
+
+
+/* __________ DARKMODE __________ */
+
+/*  NAVBAR*/
+
+body.darkmode {
+    background: #171516;
+}
+
+.darkmode .header {
+    color: #b760ff93;
+    background: #171516;
+}
+
+.darkmode .navbar a:hover {
+    color: #4DFF53;
+}
+
+.darkmode .navbar a {
+    color: #ffffff;
+}
+
+.darkmode .footer-bottom {
+    color: black;
+}
+
+/* SOBRE NOS */
+
+.darkmode .header {
+    color: #b760ff93;
+    background: #171516;
+}
+
+.darkmode .navbar a:hover {
+    color: #b760ff93;
+}
+
+.darkmode .navbar a {
+    color: #ffffff;
+}
+
+.darkmode p {
+    color: #FEFEFE;
+}
+
+.darkmode .workshop p {
+    color: #171516;
+}
+
+/* FORMATAÇÃO BOTAO DARKMODE */
+section {
+    top: 0;
+    float: right;
+}
+
+.darkmode label {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.darkmode input {
+    position: absolute;
+    opacity: 0;
+}
+
+.darkmode h1 {
+    color: #FEFEFE;
+}
+
+.darkmode .cardWorkshop {
+    background-color: #BFFFBC;
+    box-shadow: -1em 1em #171516,
+        -2em 2em #B760FF;
+}
+
+.darkmode .cardWorkshop h2 {
+    color: #B760FF;
+}
+
+
+/* CARDS */
+
+.darkmode .box-card .btn-card a {
+    box-shadow: -3px -5px 1px black;
+}
+
+.darkmode .btn-card a {
+    box-shadow: -3px -5px 1px #171516;
+}
+
+.darkmode .box-card .btn-card a:hover {
+    box-shadow: 0px 4px 1px #B760FF;
+}
+
+
+/* FOOTER */
+
+.darkmode footer {
+    background-color: rgba(0, 0, 0, 0.699);
+}
+
+
+.darkmode .footer-bottom {
+    color: rgb(255, 255, 255);
+}
+
+
+/* -----icones----- */
+#sun {
+    position: absolute;
+    font-size: 2em;
+    color: orange;
+    filter: drop-shadow(0 0 2px #ff0000a4);
+    transform: scale(0);
+    transition: 1s ease;
+}
+
+.darkmode input:checked~#sun {
+    transition-delay: .8s;
+    transform: scale(1) rotate(360deg);
+}
+
+#moon {
+    font-size: 2em;
+    color: #666;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, .5));
+    transition: 1s ease;
+}
+
+.darkmode input:checked~#moon {
+    transition-delay: 0s;
+    transform: rotate(360deg) scale(0);
+}
+
+.toggle {
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+/* CARROSSEL */
+.carousel-item {
+    height: 100%;
+}
+
+/* SOBRE NOS */
+.slogan h1 {
+    font-family: keepcalm, sans-serif;
+    font-size: 4em;
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 1%;
+}
+
+.roxo {
+    color: #B760FF;
+}
+
+.verde {
+    color: #4DFF53;
+}
+
+.sobreNos {
+    display: flex;
+    flex-direction: row;
+    padding: 7%;
+    margin: 3%;
+    text-align: center;
+}
+
+.sobreNos h2 {
+    font-family: fonte-t;
+    font-size: 2em;
+    margin-bottom: 5%;
+    color: #B760FF;
+    text-align: center;
+}
+
+.sobreNos img {
+    width: 450px;
+    height: 500px;
+}
+
+.sobrenosTexto {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    font-family: fonte-t;
+    padding: 3%;
+    margin: 5%;
+}
+
+/* WORKSHOP */
+.workshop {
+    width: 100%;
+    margin-bottom: 15%;
+}
+
+.cardWorkshop {
+    width: 70%;
+    padding: 5%;
+    margin: 0 auto;
+    background-color: #b760ff;
+    box-shadow: -1em 1em #FEFEFE,
+        -2em 2em #B760FF;
+}
+
+.workshop strong{
+    font-size: 1.2em;
+}
+
+.workshop h2 {
+    font-family: keepcalm, sans-serif;
+    color: #FEFEFE;
+    font-size: 4em;
+    margin: 0;
+    padding: 0;
+}
+
+.workshop p {
+    font-family: sans-serif;
+    font-size: 1.2em;
+    font-family: fonte-t, sans-serif;
+    color: #FEFEFE;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    padding: 1%;
+    margin: 0 auto;
+}
+
+.box-card img {
+    width: 85%;
+}
+
+/* BOTAO CARD */
+.btn-card a {
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: fonte-t;
+    margin-top: -5em;
+    z-index: 5;
+    background-color: #4DFF53;
+    padding: .5em;
+    box-shadow: -3px -5px 1px white;
+    border-radius: 1em;
+    transition: all .3s ease-in-out;
+}
+
+.btn-card {
+    z-index: 5;
+    text-align: center;
+    position: relative;
+    top: -0.5em;
+    right: 0.6em;
+}
+
+.box-card .btn-card a:hover {
+    margin-top: -5em;
+    z-index: 5;
+    background-color: #4DFF53;
+    padding: .5em;
+    box-shadow: 0px 4px 1px #b760ffab;
+}
+
+
+/* FORMULARIO CONTATO */
+
+.btn-contato {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.divBotao{
+    width: 200px;
+    margin: 0;
+}
+
+.btn-contato a {
+    text-decoration: none;
+    font-size: 1.3em;
+    font-family: fonte-t;
+    color: black;
+    background-color: #B760FF;
+    box-shadow: 0 0 10px #8c00ff;
+    padding: 1em;
+    border-radius: 0 1em 0 1em;
+    transition: all .5s ease-in-out;
+}
+
+.btn-contato a:hover {
+    border-radius: 0 0 1em 2em;
+    background-color: #4DFF53;
+    box-shadow: 0 10px 20px #4DFF53;
+}
+
+
+
+/* FOOTER */
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    font-family: fonte-t, sans-serif;
+    font-style: normal;
+    box-shadow: 0 0 10px gray;
+    padding: 2em;
+    color: #B760FF;
+    margin-top: 5%;
+}
+
+footer h3{
+font-family: fonte-t, sans-serif;
+color: #B760FF;
+margin-bottom: 0;
+font-weight: 800;
+padding: 5px;
+}
+
+footer img {
+    width: 13%;
+}
+
+.logofooter {
+    width: 50%;
+}
+
+.desenvolvedores {
+    width: 30%;
+    flex-wrap: wrap;
+}
+
+.desenvolvedores img {
+    width: 25%;
+    margin-top: 5%;
+}
+
+.fotoLink img:hover {
+    box-shadow: 0 0 30px #00ff08;
+    border-radius: 100%;
+    transition: all .5s ease-in-out;
+}
+
+.email {
+    font-family: fonte-t;
+    font-size: 1.4em;
+}
+
+.insta {
+    font-family: fonte-t;
+    font-size: 1.4em;
+}
+
+span {
+    color:#b760ff;
+    font-weight: 600;
+}
+
+footer a {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+/* ___________ RESPONSIVIDADE __________ */
+
+@media screen and (max-width: 900px) {
+
+    .navbar, a {
+        display: none;
+    }
+
+    .logo {
+        width: 35%;
+    }
+
+    .menu-mobile.abrir {
+        visibility: visible;
+        height: 100vh;
+        z-index: 1;
+    }
+
+    button {
+        display: block;
+    }
+
+    section {
+        top: 0;
+        left: 1;
+    }
+
+    .carousel-item {
+        height: 100%;
+        margin-bottom: 1%;
+    }
+
+    .slogan h1 {
+        font-family: keepcalm;
+        font-size: 2.5em;
+    }
+
+    .sobreNos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+        color: #171516;
+    }
+
+    .sobrenosTexto {
+        font-size: 1.4em;
+        font-family: fonte-t;
+    }
+
+    .sobreNos img {
+        width: 300px;
+        height: 300px;
+        text-align: center;
+        margin: auto 0;
+    }
+
+    .cardWorkshop {
+        width: 85%;
+        padding: 3%;
+        margin: 0 auto;
+        background-color:#bfffbc;
+        box-shadow: -1em 1em #FEFEFE,
+            -2em 2em #B760FF;
+        margin-bottom: 5%;
+        margin-left: 10%;
+    }
+
+    .workshop h2 {
+        text-align: center;
+        margin-bottom: 0.5em;
+        font-family: keepcalm, sans-serif;
+        color:#171516;
+        font-size: 2.5em;
+    }
+
+    .workshop p {
+        font-family: sans-serif;
+        font-size: 1.5em;
+        font-family: fonte-t;
+        color:#171516;
+    }
+
+    .workshop strong {
+        font-size: 1.4em;
+    }
+
+    /* CARDS */
+    .cards {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .box-card img {
+        margin-top: 30%;
+        width: 100%;
+    }
+
+    .box-card {
+        text-align: center;
+        margin-top: 20%;
+    }
+
+    .btn-card {
+        top: 1em;
+        right: 1.9em;
+    }
+
+    .btn-card a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        left: 35%;
+        z-index: 5;
+        text-align: center;
+        position: relative;
+        top: 3em;
+        width: 50%;
+    }
+
+    /* FORM */
+
+    .btn-contato{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2em;
+    }
+
+    .btn-contato a {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin-top: 20%;
+    }
+
+    .divBotao{
+        display: none;
+    }
+
+    /* FOOTER */
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        font-family: fonte-t, sans-serif;
+        font-style: normal;
+        box-shadow: 0 0 10px gray;
+        padding: 2em;
+        color: #B760FF;
+        display: flex;
+    }
+
+    .fotoLink {
+        width: 13%;
+        text-align: center;
+    }
+
+    .logofooter {
+        width: 100%;
+    }
+
+    .desenvolvedores {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .desenvolvedores img {
+        width: 50px;
+        height: 50px;
+        margin: 15px;
+    }
+
+    .desenvolvedores h3{
+        font-size: 2em;
+    }
+
+    .devs {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .contato h3 {
+        font-size: 2em;
+    }
+
+    .email {
+        font-family: fonte-t;
+        font-size: 1.4em;
+    }
+
+    .insta {
+        font-family: fonte-t;
+        font-size: 1.4em;
+    }
+
+    span {
+        color: #B760FF;
+        font-weight: 800;
+    }
+
+    footer a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        font-family: fonte-t, sans-serif;
+        font-style: normal;
+        box-shadow: 0 0 10px gray;
+        padding: 2em;
+        color: #B760FF;
+        display: flex;
+    }
+
+    .fotoLink {
+        width: 9%;
+        text-align: left;
+    
+    }
+
+    .logofooter {
+        width: 100%;
+    }
+
+    .desenvolvedores {
+       width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .desenvolvedores img {
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        
+    }
+
+    .desenvolvedores h3{
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .contato h3 {
+        font-size: 1.4em;
+    }
+
+    .devs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .email {
+        font-family: fonte-t;
+        font-size: 1.4em;
+    }
+
+    .insta {
+        font-family: fonte-t;
+        font-size: 1.4em;
+    }
+
+    span {
+        color: #B760FF;
+        font-weight: 800;
+    }
+
+    footer a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}

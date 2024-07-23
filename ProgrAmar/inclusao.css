@@ -1,0 +1,851 @@
+@charset "uft8";
+
+/* FONTES */
+
+@font-face {
+    font-family: fonte-t;
+    src: url(font/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: fonte-text;
+    src: url(font/Philosopher-Regular.ttf);
+}
+
+/* FONTES FIM */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+
+/* CABECALHO */
+
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #FEFEFE;
+    box-shadow: 0 0 20PX black;
+}
+
+
+/*--------------BOTÃO NAVBAR------- */
+
+.navbar {
+    width: 100%;
+}
+
+.navbar a {
+    margin-left: 2em;
+    color: #8c00ff;
+    font-size: 1.3em;
+    text-decoration: none;
+    transition: 1s;
+    font-family: "Poppins", sans-serif;
+    transition: all 1.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #4DFF53;
+    border-radius: 1.5em .5em;
+}
+
+/* --------FINAL BOTÃO NAVBAR */
+
+
+/*---------LOGO NAVBAR----------*/
+
+.logo {
+    width: 13%;
+    margin-left: 3%;
+}
+
+/* CABECALHO FIM */
+
+
+/* MENU MOBILE */
+
+.menu-mobile {
+    text-align: center;
+    background-color: #b760ffbe;
+    position: absolute;
+    top: 9.5em;
+    left: 0;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.menu-mobile nav a {
+    backdrop-filter: blur(5px);
+    margin-right: 2em;
+    color: #FEFEFE;
+    text-shadow: 0 0 10px black;
+    font-size: 2em;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: 1s;
+    margin-top: 1em;
+    font-family: fonte-t;
+    transition: all 1s ease-in-out;
+    display: block;
+    padding: 20px 30px;
+}
+
+.menu-mobile nav a:hover {
+    border-radius: 50px;
+    box-shadow: 1px 1px 10px #FEFEFE;
+    padding: 20px 25px;
+}
+
+/* MENU MOBILE FIM*/
+
+
+/* BOTAO ICONE */
+
+button {
+    margin-right: 3em;
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    border: 2px solid #4DFF53;
+    width: 15%;
+}
+
+.linha {
+    width: 30px;
+    height: 4px;
+    background-color: #4DFF53;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    position: relative;
+    transform-origin: center;
+    transition: .3s;
+}
+
+button.ativar {
+    box-shadow: 0 0 5px #b760ff93;
+}
+
+button.ativar .linha:nth-child(1) {
+    transform: translateY(10px) rotate(-40deg);
+    background-color: #b760ff;
+    box-shadow: 0 0 10px #b760ff;
+}
+
+button.ativar .linha:nth-child(3) {
+    transform: translateY(-18px) rotate(40deg);
+    background-color: #b760ff;
+    box-shadow: 0 0 10px #b760ff93;
+}
+
+button.ativar .linha:nth-child(2) {
+    opacity: 0;
+}
+
+/* BOTAO ICONE FINAL */
+
+
+/* DARKMODE */
+
+.darkmode h3 {
+    color: black;
+}
+
+.darkmode p {
+    color: #ffffff;
+}
+
+.darkmode .balao {
+    background-color: #cfb1ff;
+    box-shadow: -1em 1em #171516,
+        -2em 2em #B760FF;
+}
+
+
+/*NAVBAR*/
+
+body.darkmode {
+    background: #171516;
+}
+
+.darkmode .header {
+    color: #b760ff93;
+    background: #171516;
+}
+
+.darkmode .navbar a:hover {
+    color: #b760ff93;
+}
+
+.darkmode .navbar a {
+    color: #ffffff;
+}
+
+
+/* FOOTER */
+
+.darkmode .footer-bottom {
+    color: black;
+}
+
+.darkmode footer {
+    background-color: #171516;
+}
+
+.darkmode footer h3 {
+    color: #4DFF53;
+}
+
+
+/* FORMATAÇÃO BOTAO DARKMODE */
+
+section {
+    top: 0;
+    left: 1;
+    margin-left: 1%;
+}
+
+.darkmode label {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.darkmode input {
+    position: absolute;
+    opacity: 0;
+}
+
+/* DARKMODE FIM*/
+
+
+/* ----------ICONES DO BOTAO DARKMODE---------- */
+
+#sun {
+    position: absolute;
+    font-size: 2em;
+    color: orange;
+    filter: drop-shadow(0 0 2px rgba(255, 0, 0, 0.644));
+    transform: scale(0);
+    transition: 1s ease;
+}
+
+.darkmode input:checked~#sun {
+    transition-delay: .8s;
+    transform: scale(1) rotate(360deg);
+}
+
+#moon {
+    font-size: 2em;
+    color: #666;
+    filter: drop-shadow(0 0 2px #00000080);
+    transition: 1s ease;
+}
+
+.darkmode input:checked~#moon {
+    transition-delay: 0s;
+    transform: rotate(360deg) scale(0);
+}
+
+/* ICONES DO BOTAO DARKMODE FINAL */
+
+
+/* IMAGENS */
+.img1 {
+    width: 100%;
+    height: 100%;
+}
+
+.img2 {
+    width: 400px;
+}
+
+.container img {
+    text-align: center;
+    width: 400px;
+}
+
+.box-card img {
+    width: 400px;
+}
+
+footer img {
+    width: 10%;
+}
+
+.fotoLink img:hover {
+    box-shadow: 0 0 30px #00ff08;
+    border-radius: 100%;
+    transition: all .5s ease-in-out;
+}
+
+.logofooter {
+    width: 50%;
+    margin-left: 35px;
+    justify-content: center;
+}
+
+.desenvolvedores {
+    width: 30%;
+    flex-wrap: wrap;
+}
+
+.desenvolvedores img {
+    margin-top: 5%;
+    width: 25%;
+}
+
+.diversidade {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.diversidade img{
+    margin-top: 5%;
+}
+
+.diversidade p{
+    margin-top: 12%;
+}
+
+
+.imgInsta {
+    width: 40px;
+}
+
+.imgEmail {
+    width: 40px;
+}
+
+.imgInsta:hover {
+    cursor: pointer;
+}
+
+.imgEmail:hover {
+    cursor: pointer;
+}
+
+/* IMAGENS FIM  */
+
+
+/* TEXTOS */
+span {
+    color: #07cf00;
+}
+
+h2 {
+    font-size: 4em;
+    color: #171516;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #171516;
+}
+
+h4 {
+    font-family: "Poppins", sans-serif;
+    margin-left: -300px;
+    background-color: #b760ff;
+    color: #bfffbc;
+    display: inline-block;
+    padding: 2.9px;
+    font-size: 2em;
+    border-radius: 10px 20px 19px;
+    margin-bottom: 15px;
+    width: 200px;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.4em;
+    padding: 20px;
+}
+
+.incluTec{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.incluTec p{
+    width: 100%;
+    padding: 5%;
+}
+
+
+.divMascote{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.divMascote h5{
+    font-size: 3em;
+    color: #B760FF;
+    margin-top: 5%;
+    margin-bottom: 0;
+    font-family: keepcalm, sans-serif;
+}
+
+.divBanner{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.divContent{
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+    margin-top: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.divContent img{
+    width: 40%;
+}
+
+.divContent p{
+    width: 60%;
+    font-size: 1.4em;
+    font-family: fonte-t, sans-serif;
+    margin-top: 5%;
+}
+
+span {
+    color: #b760ff;
+    font-weight: 600;
+}
+
+footer a {
+    width: 100%;
+}
+
+footer h3 {
+    font-family: "Poppins", sans-serif;
+    color: #B760FF;
+    margin-bottom: 0;
+    font-weight: 800;
+    padding: 5px;
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 1.em;
+    padding: 0;
+}
+
+/* TEXTOS FIM  */
+
+
+.balao {
+    background-color: #bfffbc;
+    width: 70%;
+    padding: 5%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    text-align: center;
+    box-shadow: -1em 1em #FEFEFE,
+        -2em 2em #B760FF;
+    margin-top: 5em;
+}
+
+.cards {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.box-card img {
+    width: 85%;
+}
+
+/* BOTAO CARD */
+
+.btn-card a {
+    color: #171516;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: "Poppins", sans-serif;
+    margin-top: -5em;
+    z-index: 5;
+    background-color: #4DFF53;
+    padding: .5em;
+    box-shadow: -3px -5px 1px white;
+    border-radius: 1em;
+    transition: all .3s ease-in-out;
+}
+
+.btn-card {
+    z-index: 5;
+    position: relative;
+    top: -0.5em;
+    right: -0.2em;
+}
+
+.box-card .btn-card a:hover {
+    margin-top: -5em;
+    z-index: 5;
+    background-color: #4DFF53;
+    padding: .5em;
+    box-shadow: 0px 4px 1px #B760FF;
+}
+
+.darkmode .btn-card a {
+    box-shadow: -3px -5px 1px #171516;
+}
+
+/* BOTAO CARD FIM */
+
+
+/* RODAPE */
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    font-family: 'Poppins';
+    font-weight: normal;
+    margin-top: 5%;
+    box-shadow: 0 0 10px gray;
+    padding: 2em;
+    color: #B760FF;
+}
+
+/* RODAPE FIM */
+
+
+/* CONTATOS */
+
+.email {
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+}
+
+.insta {
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+}
+
+.contato {
+    margin: 0;
+}
+
+/* CONTATOS FIM */
+
+
+
+
+
+
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 900px) {
+
+    body {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 1%;
+        margin: 0 auto;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        background-color: #FEFEFE;
+        justify-content: space-between;
+
+    }
+
+    .navbar,
+    a {
+        display: none;
+    }
+
+    .logo {
+        width: 30%;
+    }
+
+    /* p {
+        padding-left: 15px;
+    } */
+
+    .menu-mobile.abrir {
+        visibility: visible;
+        height: calc(100vh - 120px);
+    }
+
+    button {
+        display: block;
+    }
+
+    h4 {
+        width: 70%;
+        margin-right: -300px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .balao h2 {
+        font-size: 30px;
+        margin-left: 25px;
+    }
+
+    .balao{
+        margin-bottom: 5em;
+        width: 80%;
+        padding: 3%;
+    }
+
+    .balao h3{
+        font-size: 1.5em;
+    }
+
+    .cardPrincipal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .box-card img {
+        width: 60%;
+    }
+
+    .box-card {
+        text-align: center;
+        margin-top: 20%;
+    }
+
+    .btn-card a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+        text-align: center;
+        position: relative;
+        top: 4em;
+        right: -5.5em;
+        width: 50%;
+    }
+
+    .incluTec{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .incluTec p{
+        margin-bottom: 1.5em;
+        width: 100%;
+        padding: 2%;
+    }
+
+    .btn-card {
+        margin-left: 5em;
+        top: 0.1em;
+        right: 8em;
+    }
+
+
+    .diversidade img {
+        width: 100%;
+    }
+
+    .diversidade {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    .diversidade p{
+        font-size: 1.6em;
+    }
+
+
+    .divMascote{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+   
+
+    .divMascote h5{
+        font-size: 2em;
+        color: #B760FF;
+        margin-top: 5%;
+        margin-bottom: 0;
+        font-family: keepcalm, sans-serif;
+    }
+    
+    .divBanner{
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .divContent{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 0;
+        padding: 0;
+    }
+    
+    .divContent img{
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    
+    .divContent p{
+        text-align: left;
+        width: 100%;
+        font-size: 1.2em;
+        font-family: fonte-t, sans-serif;
+    }
+
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        font-family: fonte-t, sans-serif;
+        font-style: normal;
+        box-shadow: 0 0 10px gray;
+        padding: 2em;
+        color: #B760FF;
+        display: flex;
+        margin-top: 25%;
+    }
+
+    footer h3 {
+        font-size: 1.5em;
+        text-align: center;
+        font-weight: 800;
+    }
+
+    .fotoLink {
+        width: 13%;
+        text-align: center;
+    }
+
+    .logofooter {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .desenvolvedores {
+        width: 110%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .desenvolvedores img {
+        width: 50px;
+        margin-top: 2px;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .devs {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .email {
+        font-family: "Poppins", sans-serif;
+        font-size: 1em;
+    }
+
+    .insta {
+        font-family: "Poppins", sans-serif;
+        font-size: 1em;
+    }
+
+    span {
+        color: #B760FF;
+        font-weight: 600;
+    }
+
+    footer a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* RESPONSIVIDADE FIM */
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 15px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4DFF53;
+    border-radius: 2em;
+}
+
+.darkmode::-webkit-scrollbar {
+    background-color: black;
+}

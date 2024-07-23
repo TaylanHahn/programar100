@@ -1,0 +1,843 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: keepcalm;
+    src: url(font/keepcalm.ttf);
+}
+
+@font-face {
+    font-family: fonte-t;
+    src: url(font/Poppins-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4DFF53;
+    border-radius: 2em;
+}
+
+.darkmode::-webkit-scrollbar {
+    background-color: black;
+}
+
+/*______________ HEADER _____________ */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FEFEFE;
+    box-shadow: 0 0 20PX black;
+}
+
+.navbar a {
+    margin-left: 2em;
+    color: #8c00ff;
+    font-size: 1.3em;
+    text-decoration: none;
+    transition: 1s;
+    font-family: fonte-t;
+    transition: all .3s ease-in-out;
+
+}
+
+.navbar a:hover {
+    color: #4DFF53;
+    border-radius: 1.5em .5em;
+}
+
+/*---------LOGO NAVBAR ----------  */
+
+.logo {
+    width: 13%;
+    margin-left: 3%;
+}
+
+
+/* MENU MOBILE */
+
+.menu-mobile {
+    text-align: center;
+    background-color: #b760ffbe;
+    position: absolute;
+    top: 9.5em;
+    left: 0;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.menu-mobile nav a {
+    backdrop-filter: blur(5px);
+    margin-right: 2em;
+    color: #FEFEFE;
+    text-shadow: 0 0 10px black;
+    font-size: 2em;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: 1s;
+    margin-top: 1em;
+    font-family: fonte-t;
+    transition: all .5s ease-in-out;
+    display: block;
+    padding: 20px 30px;
+
+}
+
+.menu-mobile nav a:hover {
+    border-radius: 50px;
+    box-shadow: 1px 1px 10px #FEFEFE;
+    padding: 20px 25px;
+
+}
+
+/* BOTAO ICONE */
+
+button {
+    margin-right: 3em;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #4DFF53;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    width: 15%;
+}
+
+.linha {
+    width: 30px;
+    height: 4px;
+    background-color: #4DFF53;
+    box-shadow: 0 0 10px #4DFF53;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    position: relative;
+    transform-origin: center;
+    transition: .3s;
+}
+
+button.ativar {
+    /* border: 4px solid red; */
+    box-shadow: 0 0 5px #b760ff93;
+
+}
+
+button.ativar .linha:nth-child(1) {
+    transform: translateY(10px) rotate(-40deg);
+    background-color: #b760ff;
+    box-shadow: 0 0 10px #b760ff;
+}
+
+button.ativar .linha:nth-child(3) {
+    transform: translateY(-18px) rotate(40deg);
+    background-color: #b760ff;
+    box-shadow: 0 0 10px #b760ff93;
+}
+
+button.ativar .linha:nth-child(2) {
+    opacity: 0;
+}
+
+/* ________ DARKMODE ________ */
+
+/*  NAVBAR*/
+
+body.darkmode {
+    background-color: #171516;
+}
+
+.darkmode .header {
+    color: #b760ff93;
+    background: #171516;
+}
+
+.darkmode .navbar a:hover {
+    color: #b760ff93;
+}
+
+.darkmode .navbar a {
+    color: #ffffff;
+}
+
+.darkmode p {
+    color: #FEFEFE;
+}
+
+.darkmode .btn-card a {
+    box-shadow: -3px -5px 1px #171516;
+}
+
+.darkmode .footer-bottom {
+    color: black;
+}
+
+/* FORMATAÇÃO BOTAO DARKMODE */
+section {
+    top: 0;
+    float: right;
+}
+
+.darkmode label {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.darkmode input {
+    position: absolute;
+    opacity: 0;
+}
+
+.darkmode h1 {
+    color: #FEFEFE;
+}
+
+.darkmode h2 {
+    color: #171516;
+}
+
+.darkmode .evolucao p {
+    color: #171516;
+}
+
+.darkmode .evolucao h4 {
+    color: #171516;
+}
+
+.darkmode .linhaTempo li {
+    color: #fefefe;
+
+}
+
+.darkmode .linhaTempo span {
+    color: #b760ff;
+    font-weight: 900;
+}
+
+.darkmode .linguaText h3 {
+    background-color: #bfffbc;
+}
+
+.darkmode .linhaTempo h3 {
+    background-color: #bfffbc;
+}
+
+.darkmode .cardEvolucao {
+    background-color: #CFB1FF;
+    box-shadow: -1em 1em #171516,
+        -2em 2em #b760ff;
+}
+
+.darkmode footer {
+    width: 100%;
+    background-color: #171516;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: 0 0 10px gray;
+    padding: 1em;
+}
+
+/* ------------icones---------- */
+#sun {
+    position: absolute;
+    font-size: 2em;
+    color: orange;
+    filter: drop-shadow(0 0 2px #ff0000a4);
+    transform: scale(0);
+    transition: 1s ease;
+
+}
+
+.darkmode input:checked~#sun {
+    transition-delay: .8s;
+    transform: scale(1) rotate(360deg);
+}
+
+#moon {
+    font-size: 2em;
+    color: #666;
+    filter: drop-shadow(0 0 2px #00000080);
+    transition: 1s ease;
+}
+
+.darkmode input:checked~#moon {
+    transition-delay: 0s;
+    transform: rotate(360deg) scale(0);
+
+}
+
+.toggle {
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+/* ___________ LINGUAGENS ______________ */
+
+/* --- ícones --- */
+.lingua {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.linguaIcons {
+    margin-top: 3%;
+    text-align: center;
+}
+
+.linguaIcons img {
+    width: 12%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* --- texto --- */
+
+h2 {
+    align-items: center;
+    background: #b760ff;
+    font-size: 1.3em;
+    font-family: keepcalm;
+    color: #4DFF53;
+    text-align: center;
+    margin: 25px auto;
+    width: 60%;
+    border-radius: 50px;
+    padding: 1%;
+}
+
+.linguaText {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.text2 {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    text-align: center;
+    margin: 2%;
+    padding: 1%;
+}
+
+.linguaText h3 {
+    color: #171516;
+    background-color: #4DFF53;
+    padding: 2%;
+    width: 100%;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: fonte-t, sans-serif;
+    margin-bottom: 10%;
+}
+
+.linguaText p {
+    font-size: 1em;
+    font-family: fonte-t, sans-serif;
+}
+
+
+
+/* __________________ WORKSHOP ______________ */
+
+.evolucao {
+    width: 100%;
+}
+
+.cardEvolucao {
+    width: 70%;
+    padding: 10%;
+    margin: 0 auto;
+    background-color: #8c00ff;
+    box-shadow: -1em 1em #FEFEFE,
+        -2em 2em #B760FF;
+}
+
+.evolucao h4 {
+    font-family: keepcalm, sans-serif;
+    color: #FEFEFE;
+    font-size: 2em;
+    margin: 2%;
+    padding: 0;
+}
+
+.evolucao p {
+    font-family: sans-serif;
+    font-size: 1.2em;
+    font-family: fonte-t, sans-serif;
+    color: #FEFEFE;
+}
+
+/* __________________ LINHA DO TEMPO ______________ */
+
+.linhaTempo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 6%;
+}
+
+.linhaTempo h3 {
+    color: #171516;
+    background-color: #4DFF53;
+    padding: 1%;
+    width: 30%;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1em;
+    font-family: fonte-t, sans-serif;
+    margin-bottom: 1%;
+}
+
+.linhaTempo li {
+    color: #171516;
+    font-size: 1.1em;
+    font-family: fonte-t;
+    margin: 1%;
+    width: 55%;
+}
+
+.linhaTempo span {
+    color: #B760FF;
+    font-weight: 900;
+}
+
+/* _________________ CARDS __________________ */
+
+/* BOTAO CARD */
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.cards img {
+    text-align: center;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.box-card {
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+}
+
+
+.btn-card a {
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: fonte-t;
+    margin-top: -5em;
+    z-index: 5;
+    background-color: #4DFF53;
+    padding: .5em;
+    box-shadow: -3px -5px 1px white;
+    border-radius: 1em;
+    transition: all .3s ease-in-out;
+}
+
+.btn-card {
+    z-index: 5;
+    position: relative;
+    text-align: center;
+    margin-left: 18%;
+    top: -0.6em;
+    right: 2.1em;
+}
+
+.box-card .btn-card a:hover {
+    margin-top: -5em;
+    z-index: 5;
+    background-color: #4DFF53;
+    padding: .5em;
+    box-shadow: 0px 4px 1px #B760FF;
+}
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    box-shadow: 0 0 10px gray;
+    padding: 2em;
+    color: #B760FF;
+    margin-top: 5%;
+}
+
+footer img {
+    width: 13%;
+}
+
+.fotoLink img:hover {
+    box-shadow: 0 0 30px #00ff08;
+    border-radius: 100%;
+    transition: all .5s ease-in-out;
+}
+
+.logofooter {
+    width: 50%;
+}
+
+.desenvolvedores {
+    width: 30%;
+    flex-wrap: wrap;
+}
+
+.desenvolvedores img {
+    margin-top: 5%;
+    width: 25%;
+}
+
+.email {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4em;
+}
+
+.insta {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4em;
+}
+
+span {
+    color: #B760FF;
+    font-weight: 600;
+}
+
+footer a {
+    width: 100%;
+}
+
+footer h3 {
+    font-weight: 800;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ########## RESPONSIVIDADE ########### */
+
+@media screen and (max-width: 900px) {
+
+    .navbar,
+    a {
+        display: none;
+    }
+
+    .logo {
+        width: 35%;
+    }
+
+    .menu-mobile.abrir {
+        visibility: visible;
+        height: 100vh;
+        z-index: 1;
+    }
+
+    button {
+        display: block;
+    }
+
+    h2 {
+        align-items: center;
+        font-size: 1em;
+        text-align: center;
+        margin: 25px auto;
+        width: 80%;
+        border-radius: 50px;
+        padding: 2%;
+    }
+
+    .lingua {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .linguaIcons {
+        
+        text-align: center;
+    }
+
+    .linguaIcons img {
+        width: 25%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        justify-content: center;
+        text-align: center;
+    }
+
+    .linguaText h3 {
+        align-items: center;
+        padding: 2%;
+        width: 90%;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 1.2em;
+        margin-bottom: 10%;
+    }
+
+    .linguaText p {
+        font-size: 1.1em;
+        font-family: fonte-t, sans-serif;
+        width: 90%;
+        text-align: center;
+    }
+
+
+    .text2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin: 5%;
+        padding: 2%;
+        justify-content: center;
+    }
+
+    .cardEvolucao {
+        width: 80%;
+        padding: 10%;
+        margin: 0 auto;
+        background-color: #8c00ff;
+        box-shadow: -1em 1em #FEFEFE,
+            -2em 2em #B760FF;
+        margin-bottom: 10%;
+    }
+
+    .evolucao h4 {
+        font-family: keepcalm, sans-serif;
+        color: #FEFEFE;
+        font-size: 1.4em;
+    }
+
+    .evolucao p {
+        font-family: sans-serif;
+        font-size: 1.3em;
+        font-family: fonte-t;
+        text-align: left;
+    }
+
+    .linhaTempo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 6%;
+    }
+
+    .linhaTempo h3 {
+        padding: 1%;
+        width: 90%;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 1.2em;
+        margin-bottom: 1%;
+    }
+
+    .linhaTempo li {
+        font-size: 1.1em;
+        margin: 5%;
+        width: 80%;
+    }
+
+
+    /* BOTAO CARD */
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .cards img {
+        text-align: center;
+        width: 80%;
+        margin-top: 28%;
+    }
+
+
+
+    .box-card {
+        justify-content: left;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-card {
+        top: 1em;
+        right: 1.6em;
+    }
+
+    .btn-card a {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+        text-align: center;
+        position: relative;
+        top: 3em;
+        right: 1.1em;
+    }
+
+    .box-card .btn-card a:hover {
+        margin-top: -5em;
+        z-index: 5;
+        background-color: #4DFF53;
+        padding: .5em;
+        box-shadow: 0px 4px 1px #B760FF;
+    }
+
+    /* FOOTER */
+
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        font-family: fonte-t, sans-serif;
+        font-style: normal;
+        box-shadow: 0 0 10px gray;
+        padding: 2em;
+        color: #B760FF;
+        display: flex;
+        margin-top: 20%;
+    }
+
+    .fotoLink {
+        width: 13%;
+        text-align: center;
+    }
+
+    .logofooter {
+        width: 100%;
+    }
+
+    .desenvolvedores {
+        width: 110%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.3em;
+    }
+
+    .desenvolvedores img {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    .devs {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .email {
+        font-family: fonte-t;
+        font-size: 1.4em;
+    }
+
+    .insta {
+        font-family: fonte-t;
+        font-size: 1.4em;
+    }
+
+    span {
+        color: #B760FF;
+        font-weight: 600;
+    }
+
+    .desenvolvedores h3{
+        font-weight: 600;
+    }
+
+    .contato h3{
+        font-size: 1.5em;
+    }
+
+    footer a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
