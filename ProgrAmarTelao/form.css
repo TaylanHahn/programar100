@@ -1,0 +1,595 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: fonte-t;
+    src: url(font/Poppins-Regular.ttf);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+    background: linear-gradient(10deg, #CFB1FF, white, white, #BFFFBC, #BFFFBC);
+}
+
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #4DFF53;
+    border-radius: 2em;
+
+}
+
+/*---------------- BOTÃO NAVBAR------- */
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FEFEFE;
+    box-shadow: 0 0 20PX black;
+}
+
+.navbar{
+    margin-right: 10%;
+    right: 10%;
+}
+
+.navbar a{
+    margin-left: 2em;
+    color: #8c00ff;
+    font-size: 1.3em;
+    text-decoration: none;
+    transition: 1s;
+    font-family: fonte-t;
+    transition: all .3s ease-in-out;
+    
+}
+
+.navbar a:hover{
+    color: #4DFF53;
+    border-radius: 1.5em .5em;
+}
+
+/* --------FINAL BOTÃO NAVBAR */
+
+/*---------LOGO NAVBAR ----------  */
+
+.logo{
+    width: 33%;
+    padding-right: 20%;
+    margin-left: 5%;
+}
+
+
+/* MENU MOBILE */
+
+.menu-mobile{
+    text-align: center;
+    background-color: #b760ffbe;
+   /* backdrop-filter: blur(5px); */
+    position: absolute;
+    top: 7.2em;
+    left: 0;
+    width: 100%;
+    height: 0;
+    /* display: none; */
+    visibility: hidden;
+    transition: .5s;
+    overflow: hidden;
+    z-index: 4;
+}
+
+.menu-mobile nav a{
+    backdrop-filter: blur(5px);
+    margin-right: 2em;
+    color: #FEFEFE;
+    text-shadow: 0 0 10px rgb(245, 204, 204);
+    font-size: 2em;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: 1s;
+    margin-top: 1em;
+    font-family: fonte-t;
+    transition: all .5s ease-in-out;
+    display: block;
+    padding: 20px 30px;
+    
+}
+
+.menu-mobile nav a:hover{
+border-radius: 50px;
+    box-shadow: 1px 1px 10px #FEFEFE;
+    padding: 20px 25px;
+
+}
+
+/* BOTAO ICONE */
+button{
+    margin-right: 3em;
+    /* width: 50px; */
+    /* height: 50px; */
+     border: 2px solid #4DFF53; 
+   
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.linha{
+    width: 50px;
+    height: 5px;
+    background-color: #4DFF53;
+    /* box-shadow: 0 0 10px #4DFF53; */
+    display: block;
+    text-align: center;
+    margin: 10px;
+    position: relative;
+    transform-origin: center ;
+    transition: .3s;
+}
+
+
+button.ativar .linha:nth-child(1){
+    transform: translateY(10px) rotate(-40deg);
+    background-color: #b760ff;
+    box-shadow: 0 0 10px #b760ff;
+}
+
+button.ativar .linha:nth-child(3){
+    transform: translateY(-18px) rotate(40deg);
+    background-color: #b760ff;
+    box-shadow: 0 0 10px #b760ff93;
+}
+
+button.ativar .linha:nth-child(2){
+    opacity: 0;
+}
+
+
+/* FORMATAÇÃO BOTAO DARKMODE */
+section {
+    top: 0;
+    float: right;
+}
+
+/* CARDS */
+
+.divy{
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+.divy img{
+    width: 50%;
+}
+
+
+/* FORMATAÇÃO BOTAO DARKMODE */
+section{
+    top: 0;
+    left: 1;
+    /* margin-left: 20%; */
+}
+
+
+.toggle{
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+
+  /* FORMULARIO DE CLIENTES */
+
+  .home{
+    position: relative;
+    width: 100%;
+}
+
+.titulo-form h2{
+    color: white;
+    margin-top: 1em;
+    font-size: 1.2em;
+    font-family: fonte-t;
+    width: 100%;
+    margin-left: 110%;
+    padding: 1em;
+    background-color: #B760FF;
+    border-radius: 2em 0 0 2em;
+}
+
+
+.content-form a{
+    color: white;
+    text-decoration: none;
+   background-color: black;
+    font-weight: 500;
+    padding: 10px 40px;
+    border-radius: 1em;
+    transition: all .5s ease-in-out;
+}
+
+.content-form a:hover{
+    /* background-color: ; */
+    box-shadow: 0 0 10px black;
+    
+}
+
+.content-form p{
+    margin: 1em 0 2em;
+    font-family: fonte-t;
+}
+
+.wrapper-login{
+     /* position: relative; */
+    width: 100%;
+    background: #4dff537e;
+    box-shadow: -5px 5px 1px white,
+    -15px 15px 1px #b760ffab;
+    padding: 1em 6em;
+    /* margin-top: 25em; */
+}
+ 
+.wrapper-login .input-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+} 
+.quadro input{
+    width: 300px;
+    height: 125px;
+}
+.mensagemphp{
+    font-family: fonte-t;
+    font-size: 2em;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box input{
+    background: #B760FF;
+    border: none;
+    padding: 1em;
+    border-radius: 40px;
+    color: white;
+    margin: .5em;
+    text-align: center;
+    transition: all .5s ease-in-out;
+}
+
+.input-box input:hover{
+    color: black;
+    background-color: rgba(255, 255, 255, 0.836);
+    box-shadow: 0 0 10px white;
+}
+
+.input-box label{
+    font-size: 1em;
+}
+
+.input-box .icon{
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    font-size: 1.2em;
+    color: #4DFF53;
+}
+
+
+.input-box{
+    text-align: center;
+    font-family: fonte-t;
+    font-size: 1em;
+    color: black;
+    margin-top: 1.5em;
+}
+
+
+.btn-card input{
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: fonte-t;
+    margin-top: -5em;
+    z-index: 5;
+    background-color: #4DFF53;
+    padding: .5em;
+    box-shadow: -3px -5px 1px white;
+    border-radius: 1em 0 1em 0;
+    transition: all .3s ease-in-out;
+    border: none;
+}
+
+.btn-card{
+    z-index: 5;
+    text-align: center;
+    position: relative;
+    top: 1em;
+}
+
+.btn-card input:hover{
+    margin-top: -5em;
+    z-index: 5;
+    background-color: #4DFF53;
+    padding: .5em;
+    box-shadow: 0px 5px 1px #b760ffab;
+    cursor: pointer;
+}
+
+
+::-webkit-input-placeholder {
+    color: black;
+ }
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    box-shadow: 0 0 10px gray;
+    padding: 2em;
+    color: #B760FF;
+    margin-top: 5%;
+}
+
+footer img {
+    width: 13%;
+}
+
+.fotoLink img:hover {
+    box-shadow: 0 0 30px #00ff08;
+    border-radius: 100%;
+    transition: all .5s ease-in-out;
+}
+
+.logofooter {
+    width: 50%;
+}
+
+.desenvolvedores {
+    width: 30%;
+    flex-wrap: wrap;
+}
+
+.desenvolvedores img {
+    margin-top: 5%;
+    width: 25%;
+}
+
+.email {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4em;
+}
+
+.insta {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4em;
+}
+
+span {
+    color: #B760FF;
+    font-weight: 600;
+}
+
+footer a {
+    width: 100%;
+}
+
+footer h3 {
+    font-weight: 800;
+}
+
+
+
+
+
+
+
+
+/* CELUALR -------- */
+@media (max-width: 900px ){
+
+    .titulo-form{
+         font-size: 14px;    
+    }
+    .navbar, a{
+        display: none;
+    }
+    
+    .logo{
+        width: 50%;
+    }
+
+    .menu-mobile.abrir{
+        visibility: visible;
+        height: calc(100vh - 120px);
+   
+    }
+  
+    button{
+        display: block;
+        visibility: inherit;
+    }
+
+    section{
+        top: 0;
+        left: 1;
+    }
+
+    /* .container-card{
+      display: flex; 
+     /flex-direction: column; 
+    }
+     */
+    .logo img{
+        width: 50%;
+        position: absolute;
+        left: 28%;
+        z-index: -1;
+        top: 1em;
+    }
+    
+    .navbar{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .navbar-2{
+        display: flex;
+        flex-direction: column;
+        margin-left: 90%;
+    }
+    
+    .navbar a{
+        /* margin-left: 1em; */
+        margin-left: -80%;
+        font-size: 2em;
+        font-family: fonte-n;
+        text-decoration: none;
+        color: black;
+        transition: all .5s ease-in-out;
+        z-index: 4;
+    }
+    
+    .navbar-2 a{
+        /* margin-right: -5%; */
+        margin-top: -40%;
+        margin-bottom: -150%;
+    }
+    
+    
+    /* formulario */
+   
+    .btn-card{
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        top: 3.3em;
+        font-size: 1em;
+        width: 100%;
+        text-align: center;
+    }
+
+    .titulo-form{
+        width: 100%;
+        margin-right: 190%;
+        margin-bottom: 2em;
+    }
+
+    .mensagemphp{
+        font-family: fonte-t;
+        font-size: 1.5em;
+    }
+
+    .divy img{
+        width: 115%;
+    }
+
+    
+    /* FOOTER */
+
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        font-family: fonte-t, sans-serif;
+        font-style: normal;
+        box-shadow: 0 0 10px gray;
+        padding: 2em;
+        color: #B760FF;
+        display: flex;
+        margin-top: 30%;
+    }
+
+    .fotoLink {
+        width: 13%;
+        text-align: center;
+    }
+
+    .logofooter {
+        width: 100%;
+    }
+
+    .desenvolvedores {
+        width: 110%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    .desenvolvedores img {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    .devs{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .email {
+        font-family: fonte-t;
+        font-size: 1.4em;
+    }
+
+    .insta {
+        font-family: fonte-t;
+        font-size: 1.4em;
+    }
+
+
+
+    footer a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+}
+
+
+
+
